@@ -1,0 +1,18 @@
+services:
+  postgres:
+    image: postgres:15
+    container_name: reachinbox_postgres
+    restart: always
+    environment:
+      POSTGRES_USER: admin
+      POSTGRES_PASSWORD: admin123
+      POSTGRES_DB: reachinbox
+    ports:
+      - "5433:5432"
+
+  redis:
+    image: redis:7
+    container_name: reachinbox_redis
+    restart: always
+    ports:
+      - "6379:6379"
