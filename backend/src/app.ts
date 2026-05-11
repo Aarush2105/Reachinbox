@@ -5,7 +5,7 @@ import emailRoutes from "./routes/emailRoutes";
 const app = express();
 
 app.use(cors({
-  origin: "https://6a01a936c5d71b85860a76dd--wondrous-horse-7fbe25.netlify.app/",
+  origin: process.env.FRONTEND_URL || "http://localhost:3000",
   credentials: true,
 }));
 app.use(express.json());
